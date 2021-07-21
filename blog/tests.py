@@ -73,7 +73,7 @@ class BlogTest(TestCase):
 
     def test_post_update_view_uses_correct_template(self):
         response = self.client.get("/posts/1/edit/")
-        self.assertTemplateUsed( response.status_code, 404) 
+        self.assertTemplateUsed(response, "post_edit.html") 
 
     
     
